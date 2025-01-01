@@ -33,7 +33,7 @@ const Body = () => {
   
   return (
     <>
-      <h1 className="head">Food Paradise</h1>
+      <h1 className="head">Dishcovery</h1>
       <div className="searchBar">
         <input
           type="text"

@@ -1,112 +1,146 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.searchBar{
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 22px;
+}
+.searchBar input{
+  width: 400px;
+  padding: 9px;
+  font-size: 22px;
+  border: none;
+  background-color: #e7e7e7;
+  border-radius: 6px;
+}
+.searchBar button{
+  width: 90px;
+  background-color: orange;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.meals{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+  justify-content: center;
+  width: 90%;
+  /* background-color: blueviolet; */
+  margin: auto;
+  margin-top: 44px;
+
+}
+.meals img{
+  width: 100%;
+  height: 270px;
+ border-top-left-radius: 11px;
+ border-top-right-radius: 11px;
+
+}
+.mealImg{
+  width: 280px;
+  height: 380px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 3px 3px rgb(240, 240, 240);
+  border-radius: 11px;
+}
+.mealImg p{
+  font-weight: 600;
+}
+/* Parent Container */
+.mealInfo {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(255, 216, 42, 0.44);
+  padding: 32px;
+  border-radius: 10px;
+  flex-wrap: wrap; /* Ensures content wraps if needed */
+}
+
+/* Image Styling */
+.mealInfo img {
+  /* width: auto; Maintain aspect ratio */
+  /* max-width: 100%; Ensure it doesn't exceed the container's width */
+  /* height: auto; Maintain aspect ratio */
+  /* max-height: 90vh; Limit height to 90% of the viewport height */
+  /* object-fit: contain; Ensure the image is scaled to fit within the bounds */
+  /* border-radius: 11px; */
+  /* margin: 0 auto;  */
+  width: 400px;
+  height: 400px;
+  border-radius: 11px;
+}
+
+/* Info Styling */
+.mealInfo .info {
+  max-width: 600px; 
+  text-align: left;flex: 1;
+}
+
+.mealInfo h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.mealInfo ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.mealInfo p {
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .mealInfo {
+    flex-direction: column;
+    text-align: center;
+    
+    padding: 20px;
   }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+
+  .mealInfo img {
+    max-height: 60vh; /* Reduce height limit for smaller screens */
+    margin: 0 auto 20px;
   }
-  
-  .searchBar{
-    display: flex;
-    justify-content: center;
-    gap: 7px;
-    margin-top: 22px;
+
+  .mealInfo .info {
+    margin-top: 20px;
+    text-align: center;
   }
-  .searchBar input{
-    width: 400px;
-    padding: 9px;
-    font-size: 22px;
-    border: none;
-    background-color: #e7e7e7;
-    border-radius: 6px;
-  }
-  .searchBar button{
-    width: 90px;
-    background-color: orange;
-    color: white;
-    border: none;
+}
+
+@media (max-width: 480px) {
+  .mealInfo h1 {
     font-size: 20px;
-    border-radius: 6px;
-    cursor: pointer;
   }
-  .meals{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 21px;
-    justify-content: center;
-    width: 90%;
-    /* background-color: blueviolet; */
-    margin: auto;
-    margin-top: 44px;
-  
+
+  .mealInfo ul {
+    font-size: 14px;
   }
-  .meals img{
-    width: 100%;
-    height: 270px;
-   border-top-left-radius: 11px;
-   border-top-right-radius: 11px;
-  
+
+  .mealInfo p {
+    font-size: 14px;
   }
-  .mealImg{
-    width: 280px;
-    height: 380px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0px 3px 3px 3px rgb(240, 240, 240);
-    border-radius: 11px;
-  }
-  .mealImg p{
-    font-weight: 600;
-  }
-  .mealImg button{
-    width: 120px;
-    background-color: orange;
-    color: white;
-    font-size: 17px;
-    border: none;
-    border-radius: 21px;
-    padding: 7px;
-    cursor: pointer;
-  }
-   .mealInfo img{
-    width: 400px;
-    height: 400px;
-    border-radius: 11px;
-   }
-   .mealInfo {
-    /* width: 90%; */
-    height: 90vh;
-    margin: auto;
-    display: flex;
-    gap: 22px;
-    justify-content:center ;
-    align-items: center;
-    background-color: rgba(255, 216, 42, 0.44);
-    padding: 32px;
-   }
-   .mealInfo h2{
-    border: none;
-    padding: 9px;
-    border-radius: 6px;
-    font-size: 19px;
-    /* background-color: orangered; */
-    color: black;
-   }
-   .mealInfo ul{
-    list-style-type:circle;
-   }
-  .mealInfo .info{
-    margin-top: -112px;
-  }
-  .msg{
-    text-align: center;
-  }
-  .head{
-    text-align: center;
-  }
+}
